@@ -1,0 +1,91 @@
+@import "_variables.scss";
+
+html,body{
+  height: auto;
+  min-height: 100%;
+}
+body{
+  background: $base-bg;
+  padding-bottom: 50px;
+}
+
+.fs-12{font-size: 12px;}
+.mr-10{margin-right:10px;}
+.cl-primary{color: $primary;}
+.container{
+  max-width: 1140px;
+  width: 100%; 
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    padding: 0 30px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 0 10px;
+  }
+}
+
+.ant-layout{
+  min-height: 100%;
+  background: transparent;
+}
+
+/* VueAnt */
+
+.ant-select{
+  &:hover, &.ant-select-focused{
+    z-index: 1;
+  }
+}
+.is-transparent{
+  .ant-select-selection{
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.ant-input, .ant-input.ant-calendar-picker-input, .ant-select-selection{
+  line-height: 34px;
+  height: 34px;
+  font-weight: 300;
+}
+
+.ant-select-selection__placeholder, .ant-select-search__field__placeholder{
+  color: #555;
+}
+
+/* Transitions */
+
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+@keyframes slideUp {
+  0% {}
+  30% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.slide-x-transition-enter-active,
+.slide-x-transition-leave-active {
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+.slide-x-transition-move {
+  transition: all 0.6s;
+}
+.slide-x-transition-enter,
+.slide-x-transition-leave-to {
+  opacity: 0;
+  transform: translateX(-10px);
+}

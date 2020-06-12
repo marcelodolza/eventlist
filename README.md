@@ -1,4 +1,7 @@
-# vue-test-1
+# Event List
+(Vue, Vue Router, Vue Ant, Sass).
+
+![Preview](https://dolza.dev/playground/eventlist/preview.gif)
 
 ## Project setup
 ```
