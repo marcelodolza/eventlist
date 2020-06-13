@@ -48,8 +48,6 @@ export default {
     top: 60px;
     box-shadow: 0 1px 13px #ccc;
     font-size: 12px;
-    i {
-    }
   }
 }
 </style>

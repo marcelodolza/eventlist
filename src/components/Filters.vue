@@ -146,6 +146,7 @@ export default {
     handleChange() {
       this.$emit("onChange", this.filters);
     },
+
     handleLayoutChange(e) {
       this.filters.layout = e.target.value;
       this.handleChange();

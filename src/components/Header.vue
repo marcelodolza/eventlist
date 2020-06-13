@@ -24,6 +24,7 @@
     align-items: center;
     justify-content: space-between;
   }
+
   &__logo {
     margin: 0;
     width: 60px;
@@ -39,6 +40,7 @@
       border-width: 2px;
     }
   }
+
   &__title {
     margin: 0;
     text-transform: uppercase;
@@ -47,6 +49,7 @@
     color: #333;
     font-size: 18px;
   }
+
   &__nav {
     .ant-btn {
       border: 0;

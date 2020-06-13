@@ -1,13 +1,12 @@
 @import "_variables.scss";
 
 html,body{
-  height: auto;
-  min-height: 100%;
+  height: 100%;
 }
 body{
   background: $base-bg;
-  padding-bottom: 50px;
 }
+
 .fs-12{font-size: 12px;}
 .mr-10{margin-right:10px;}
 .cl-primary{color: $primary;}
@@ -23,13 +22,12 @@ body{
   }
 }
 
+/* VueAnt */
+
 .ant-layout{
   min-height: 100%;
   background: transparent;
 }
-
-/* VueAnt */
-
 .ant-select{
   &:hover, &.ant-select-focused{
     z-index: 1;
@@ -42,13 +40,11 @@ body{
     box-shadow: none;
   }
 }
-
 .ant-input, .ant-input.ant-calendar-picker-input, .ant-select-selection{
   line-height: 34px;
   height: 34px;
   font-weight: 300;
 }
-
 .ant-select-selection__placeholder, .ant-select-search__field__placeholder{
   color: #555;
 }

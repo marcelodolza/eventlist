@@ -62,6 +62,7 @@ export default {
   }
 };
 </script>
+
 <style scoped lang="scss">
 .EventDetails {
   padding-bottom: 50px;

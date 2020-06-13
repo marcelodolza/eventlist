@@ -87,8 +87,7 @@ export default {
     isOut() {
       return this.event.availablePlacesLeft === 0;
     }
-  },
-  methods: {}
+  }
 };
 </script>
 

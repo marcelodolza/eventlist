@@ -153,6 +153,7 @@ export default {
     onChangeFilters(filtersUpdated) {
       this.filters = filtersUpdated;
     },
+
     onCloseDrawer() {
       this.drawer.visible = false;
       this.$router.push("/events");
@@ -160,8 +161,10 @@ export default {
   }
 };
 </script>
+
 <style lang="scss">
 .Events {
+  padding-bottom: 50px;
   &:before,
   &:after {
     display: block;
