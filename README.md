@@ -1,7 +1,5 @@
 # Event List
-(Vue, Vue Router, Vue Ant, Sass).
-
-![Preview](https://dolza.dev/playground/eventlist/preview.gif)
+[Preview](https://dolza.dev/playground/eventlist/preview.mp4)
 
 ## Project setup
 ```
