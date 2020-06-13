@@ -10,16 +10,24 @@
     <a-tag class="fs-12 ListItem__sold-out" v-if="isOut">
       SOLD OUT
     </a-tag>
+
     <div class="ListItem__content">
+      <router-link
+        class="ListItem__content__arrow"
+        :to="`/events/${event.name}/details`"
+      >
+        <a-icon type="right" />
+      </router-link>
       <a-row>
         <a-col :md="12" :xs="24">
           <a-row>
             <a-col :span="24">
               <router-link
+                class="ListItem__name"
                 :to="`/events/${event.name}/details`"
                 :disabled="isOut"
               >
-                {{ event.name }}
+                <a-icon type="shopping-cart" /> <span>{{ event.name }}</span>
               </router-link>
             </a-col>
             <a-col :span="24" class="fs-12">
@@ -94,8 +102,33 @@ export default {
   font-size: 13px;
   transition: box-shadow 0.3s ease, border 0.2s ease;
   color: #999;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px #ddd;
   position: relative;
+
+  &__name {
+    position: relative;
+    display: inline-block;
+    & > * {
+      transition: all 0.2s $base-easing;
+    }
+    i {
+      opacity: 0;
+      transform: translateX(-15px);
+    }
+    span {
+      display: inline-block;
+      transform: translateX(-17px);
+    }
+    &:hover {
+      i {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+      span {
+        transform: translateX(0);
+      }
+    }
+  }
 
   &__venue {
     color: #999;
@@ -121,6 +154,21 @@ export default {
   &__content {
     padding: 10px 15px;
     width: 100%;
+    position: relative;
+
+    &__arrow {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      padding: 0 10px;
+      font-size: 20px;
+      opacity: 0.12;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+      color: black;
+    }
 
     .ant-row {
       width: 100%;
@@ -134,31 +182,14 @@ export default {
       line-height: 17px;
       padding: 0 5px;
     }
-
-    @media screen and (min-width: 768px) {
-      & > .ant-row {
-        & > .ant-col {
-          &:nth-child(2) {
-            text-align: right;
-          }
-        }
-      }
-    }
-    @media screen and (max-width: 767px) {
-    }
   }
+
   &__content-extra {
     height: 0px;
     overflow: hidden;
     transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     width: 100%;
     border-top: 1px solid transparent;
-  }
-  &:hover:not(.is-out) {
-    position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.065);
-    z-index: 2;
   }
 
   &.is-active {
@@ -167,13 +198,35 @@ export default {
       border-top-color: #eee;
     }
   }
+
   &.is-out {
     .ListItem__content {
+      &__arrow {
+        display: none;
+      }
       opacity: 0.4;
       .ant-tag {
         color: #555;
         background-color: #ddd;
       }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__content {
+      &__arrow {
+        display: none;
+      }
+      & > .ant-row {
+        & > .ant-col {
+          &:nth-child(2) {
+            text-align: right;
+          }
+        }
+      }
+    }
+    &:hover:not(.is-out) {
+      border: 1px solid rgba(0, 0, 0, 0.2);
     }
   }
 }

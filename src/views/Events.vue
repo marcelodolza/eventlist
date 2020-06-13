@@ -115,21 +115,35 @@ export default {
       }
 
       // SortBy
-      if (["name", "venue"].includes(sortBy)) {
-        list = list.sort(this.dynamicSort(sortBy));
-      } else if (sortBy === "upcoming") {
-        list = list.sort((a, b) => {
-          return (
-            this.getBasicDate(a.startDate) - this.getBasicDate(b.startDate)
-          );
-        });
-      } else if (sortBy === "lowestprice") {
-        list = list.sort((a, b) => {
-          return (
-            parseFloat(a.price[0].ticketPrices.min) -
-            parseFloat(b.price[0].ticketPrices.min)
-          );
-        });
+      if (sortBy) {
+        switch (sortBy) {
+          case "upcoming":
+            list = list.sort((a, b) => {
+              return (
+                this.getBasicDate(a.startDate) - this.getBasicDate(b.startDate)
+              );
+            });
+            break;
+          case "lowestprice":
+            list = list.sort((a, b) => {
+              return (
+                parseFloat(a.price[0].ticketPrices.min) -
+                parseFloat(b.price[0].ticketPrices.min)
+              );
+            });
+            break;
+          case "highestprice":
+            list = list.sort((a, b) => {
+              return (
+                parseFloat(b.price[0].ticketPrices.min) -
+                parseFloat(a.price[0].ticketPrices.min)
+              );
+            });
+            break;
+          default:
+            list = list.sort(this.dynamicSort(sortBy));
+            break;
+        }
       }
 
       return list;
@@ -176,17 +190,11 @@ export default {
 
     &.is-list {
       .ListItem {
-        box-shadow: 0 0 5px #ddd;
         &:first-child {
           border-radius: 6px 6px 0 0;
         }
         &:last-child {
           border-radius: 0 0 6px 6px;
-        }
-        &:not(.is-out) {
-          &:hover {
-            border-radius: 6px;
-          }
         }
       }
     }

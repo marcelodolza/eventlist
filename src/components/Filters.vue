@@ -113,7 +113,7 @@ export default {
           }
         ],
         layout: "list",
-        sort: undefined,
+        sort: "upcoming",
         sortOptions: [
           {
             text: "Event name",
@@ -130,6 +130,10 @@ export default {
           {
             text: "Lowest price first",
             value: "lowestprice"
+          },
+          {
+            text: "Highest price first",
+            value: "highestprice"
           }
         ]
       }

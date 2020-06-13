@@ -44,7 +44,10 @@
     </a-row>
 
     <footer class="EventDetails__footer">
-      <a-button icon="shop" type="primary">BUY TICKETS</a-button>
+      <a-button type="primary">
+        <a-icon type="tags" />
+        GET TICKETS
+      </a-button>
     </footer>
   </div>
 </template>
