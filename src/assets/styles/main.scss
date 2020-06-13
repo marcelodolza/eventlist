@@ -5,6 +5,7 @@ html,body{
 }
 body{
   background: $base-bg;
+  overflow-x: hidden;
 }
 
 .fs-12{font-size: 12px;}
