@@ -151,7 +151,7 @@ export default {
 </script>
 <style lang="scss">
 .Filters {
-  padding: 30px 0;
+  padding: 40px 0 30px 0;
   color: $primary;
 
   &__date {

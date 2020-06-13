@@ -16,8 +16,8 @@
 
 <style lang="scss">
 .Header {
-  padding: 10px 0;
-  background: #fff;
+  padding: 7px 0;
+  background: rgba(255, 255, 255, 0.8);
   & > .container {
     display: flex;
     flex-direction: row;
@@ -27,12 +27,16 @@
   &__logo {
     margin: 0;
     width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
     img {
       display: block;
       width: 100%;
     }
     @media screen and (max-width: 767px) {
-      width: 36px;
+      width: 38px;
+      border-width: 2px;
     }
   }
   &__title {
