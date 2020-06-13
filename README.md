@@ -1,5 +1,7 @@
 # Event List
-[Preview](https://dolza.dev/playground/eventlist/preview.mp4)
+![Preview](https://dolza.dev/playground/eventlist/preview.png)
+
+[Video Preview](https://dolza.dev/playground/eventlist/preview.mp4)
 
 ## Project setup
 ```
