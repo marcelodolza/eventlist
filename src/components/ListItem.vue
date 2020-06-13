@@ -106,9 +106,10 @@ export default {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border-color: #aaa;
-    color: #aaa;
-    background: white;
+    border: 0;
+    box-shadow: 0 0 8px 8px #fff;
+    color: #fff;
+    background: #ccc;
     z-index: 1;
   }
 
