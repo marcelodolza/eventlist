@@ -1,4 +1,4 @@
-
+![Preview](https://dolza.dev/playground/eventlist/preview.png)
 
 [Video Preview](https://dolza.dev/playground/eventlist/preview.mp4)
 
