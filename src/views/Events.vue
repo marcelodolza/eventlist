@@ -2,7 +2,10 @@
   <div class="Events">
     <div class="container">
       <Filters @onChange="onChangeFilters" />
-      <ul
+
+      <transition-group
+        name="card"
+        tag="ul"
         class="Events__list"
         :class="{
           'is-grid': filters.layout === 'grid',
@@ -15,7 +18,8 @@
           :currency="filters.currency"
           :key="item.name"
         />
-      </ul>
+      </transition-group>
+
       <div
         v-if="filteredEvents.length === 0"
         class="Events__result is-notfound"
@@ -171,9 +175,8 @@ export default {
     margin: 0;
 
     &.is-list {
-      box-shadow: 0 0 5px #ddd;
       .ListItem {
-        margin: 2px 0;
+        box-shadow: 0 0 5px #ddd;
         &:first-child {
           border-radius: 6px 6px 0 0;
         }

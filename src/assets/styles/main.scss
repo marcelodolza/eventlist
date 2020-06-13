@@ -56,6 +56,28 @@ body{
 
 /* Transitions */
 
+.card{
+  
+  &-move {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.5, 1) 50ms;
+  }
+  &-enter-active {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  }
+  &-leave-active {
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
+    position: absolute;
+    z-index: 0;
+  }
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+  }
+  &-enter {
+    transform: scale(0.9);
+  }
+}
+
 @keyframes placeholderShimmer {
   0% {
     background-position: -468px 0;
