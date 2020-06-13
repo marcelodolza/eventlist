@@ -6,7 +6,6 @@
         shape="circle"
         icon="close"
         size="small"
-        type="primary"
         @click.prevent="$router.push('/events')"
       />
     </div>
@@ -43,12 +42,14 @@ export default {
     }
   }
 
-  &__close {
+  &__close.ant-btn {
     position: absolute;
     right: 10px;
     top: 60px;
-    font-weight: bold;
+    box-shadow: 0 1px 13px #ccc;
     font-size: 12px;
+    i {
+    }
   }
 }
 </style>
