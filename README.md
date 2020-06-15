@@ -1,6 +1,6 @@
 ![Preview](https://marcelodolza.com/playground/eventlist/preview.png)
 
-[Video Preview](https://marcelodolza.com/playground/eventlist/preview.mp4)
+[Video demo](https://marcelodolza.com/playground/eventlist/preview.mp4)
 
 ## Project setup
 ```
